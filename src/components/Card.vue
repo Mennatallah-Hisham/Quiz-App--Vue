@@ -1,9 +1,11 @@
 <script setup>
+import { RouterLink } from 'vue-router';
 defineProps(['quiz'])
 </script>
 <template>
 
-    
+    <RouterLink :to="`/quiz/${quiz.id}`">
+           
     <article class="card">
         <img :src="quiz.img" alt="cover image"/>
   
@@ -11,6 +13,9 @@ defineProps(['quiz'])
         <p> {{quiz.questions.length}} questions</p>
   
       </article>
+
+    </RouterLink>
+ 
 </template>
 
 <style scoped>
