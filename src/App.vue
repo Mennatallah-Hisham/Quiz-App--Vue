@@ -2,6 +2,7 @@
 import {ref,watch} from"vue";
 import q from "./data/quizes.json"
 import Card from "./components/Card.vue";
+import {RouterView} from "vue-router"
 const quizes =ref(q)
 const search=ref("");
 
@@ -14,6 +15,7 @@ watch(search,()=>{
 </script>
 <template>
 <div class="container">
+  <RouterView/>
 
 
   <header>
